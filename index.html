@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cards.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">QPMS</div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="pages/user-login.html" id="loginBtn">Login</a>
+            <a href="pages/admin-login.html" id="adminBtn">Admin</a>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <h1>Question Paper Repository</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search papers...">
+            <div class="filters">
+                <select id="subject-filter">
+                    <option value="">Physics</option>
+                    <option value="">Mathematics</option>
+                    <option value="">Chemistry</option>
+                </select>
+                <select id="year-filter">
+                    <option value="">2022</option>
+                    <option value="">2023</option>
+                    <option value="">2024</option>
+                </select>
+                <select id="semester-filter">
+                    <option value="">Sessional</option>
+                    <option value="">Semester</option>
+                    <option value="">Practice</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div id="papers-container" class="papers-grid">
+        <!-- Papers will be dynamically added here -->
+    </div>
+
+    <div id="login-prompt" class="modal hidden">
+        <div class="modal-content">
+            <h2>Login Required</h2>
+            <p>Please login to download question papers.</p>
+            <div class="modal-buttons">
+                <button onclick="window.location.href='pages/user-login.html'">Login</button>
+                <button onclick="window.location.href='pages/user-login.html#register'">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

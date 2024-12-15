@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - QPMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">QPMS Admin</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#" onclick="AuthUtil.logout()">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Users</h3>
+                <p id="total-users">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Papers</h3>
+                <p id="total-papers">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Downloads</h3>
+                <p id="total-downloads">0</p>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2>Manage Papers</h2>
+            <div id="papers-list"></div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2>User Management</h2>
+            <div id="users-list"></div>
+        </div>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
